@@ -7,4 +7,4 @@ print(f"Hello, Python.")
 """
 print(f"Welcome to python learning odule 1.")
 # Below statement has intentional typo to demonstrate error handling in python.
-# print(f"Welcome to python learning odule 1.")
+ print(f"Welcome to python learning odule 1.")
