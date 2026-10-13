@@ -30,14 +30,32 @@
 
 def is_perfect(n):
     """
+        Check whether a number is a perfect number.
+
+        Parameters:
+        n (int): A positive integer to check.
+
+        Returns:
+        bool: True if n is a perfect number, False otherwise.
     """
+    # Initialize an empty list to hold the proper divisors of n
     divisors = []
+    # Initialize the running sum of divisors
     sum = 0
+    # Iterate through every number from 1 up to n-1
     for i in range(1,n):
+        # Check if i divides n evenly
         if n % i == 0:
+            # Store the divisor and add it to the sum
             divisors.append((i))
             sum += i
+    # A perfect number equals the sum of its proper divisors
     if sum == n:
         return True
     else:
         return False
+
+n = 19
+print(is_perfect(n))
+n = 28
+print(is_perfect(n))

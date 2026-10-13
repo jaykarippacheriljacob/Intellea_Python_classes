@@ -27,16 +27,37 @@
 """
 
 def generate_collatz_sequence(n):
-   new = n
-   set = []
-   set.append(int(new))
-   while True:
-       if new == 1:
-           return set
-       if new % 2 == 0:
-           new /= 2
-           set.append(int(new))
-       else:
-           new *= 3
-           new += 1
-           set.append(int(new))
+    """
+        Generate the Collatz sequence starting from n until it reaches 1.
+
+        Parameters:
+        n (int): A positive integer to start the sequence.
+
+        Returns:
+        list: A list of integers representing the Collatz sequence.
+    """
+    # Initialize the current number with the starting value
+    new = n
+    # Initialize an empty list to hold the sequence
+    set = []
+    # Add the starting number to the sequence
+    set.append(int(new))
+    # Keep generating terms until the sequence reaches 1
+    while True:
+        # Stop and return the sequence once 1 is reached
+        if new == 1:
+            return set
+        # If the number is even, divide it by 2
+        if new % 2 == 0:
+            new /= 2
+            # Append the new term to the sequence
+            set.append(int(new))
+        # If the number is odd, multiply by 3 and add 1
+        else:
+            new *= 3
+            new += 1
+            # Append the new term to the sequence
+            set.append(int(new))
+
+n = 20
+print(generate_collatz_sequence(20))
