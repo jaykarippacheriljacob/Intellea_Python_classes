@@ -19,6 +19,12 @@ while login_attempts <= 3:
     print(f"Login Attempt: {login_attempts}")
     login_attempts += 1
 
+# Example for while loop - Password validation
+password = "" # The empty string is necessary ot else the compiler gives NameError, password variable not defined.
+while password != "python123":
+    password = input("Enter the password: ")
+print("Login Successfull!")
+
 #####
 # BREAK STATEMENT
 
@@ -49,6 +55,32 @@ for mark in marks:
 stars = int(input("Enter the number of starts to print: "))
 for i in range(1,stars + 1):
     for j in range(1, i + 1):
-        print(f"* ", end="")
+        print(f"# ", end="")
     print()  # Print a newline after each row
 
+# Print the below pattern:
+# * * * *
+# * * *
+# * *
+# *
+stars = int(input("Enter the number of rows of stars: "))
+for i in range(stars, 0, -1):
+    for j in range(i):
+        print("* ", end = "")
+    print()
+
+# Print the below pattern:
+# * * * * 
+# *     *
+# *     *
+# * * * * 
+rows = int(input("Enter the number of rows: "))
+
+for i in range(rows):
+    for j in range(rows):
+        if i != 0 and i != rows-1 and j != 0 and j != rows-1:
+            print("  ", end = "")
+        else:
+            print("* ", end = "")
+    print()
+  
