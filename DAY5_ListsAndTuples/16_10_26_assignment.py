@@ -1,5 +1,5 @@
 """
-ASSIGNMENT
+ASSIGNMENT SUBMITTED BY: JAY K JACOB
 Due Mon 19 Oct, 11:00 am
 E-Commerce Inventory Management System
 Set by Hemalatha · marked out of 10
