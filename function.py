@@ -102,3 +102,41 @@ names.sort()
 print(names)
 names.sort(key=lambda name:len(name))
 print(names)
+
+#####
+# Additional Unseful built-in Functions
+# 1. map()
+# syntax: map(function, sequence) 
+marks = [50, 60, 70, 80]
+new_marks = []
+# Old way we were following:
+# for mark in marks:
+#     new_marks.append(mark + 5)
+# print(new_marks)
+
+# Faster way:
+new_marks = list(map(lambda mark:mark+5, marks))
+print(f" The revised marks: {new_marks}")
+
+# 2. filter()
+# syntax: filter(function, sequence)
+stu_marks = {45, 78, 56, 90, 32, 85}
+passed = []
+# Old way we were following:
+# for mark in stu_marks:
+#     if mark >= 60:
+#         passed.append(mark)
+# print(passed)
+
+# Faster way:
+passed = list(filter(lambda mark: mark >= 60, stu_marks))
+print(f"Passed students segregatted using filter: {passed}")
+
+# 3. reduce()
+# for usage of reduce you need to import it from library
+# syntax: reduce(function, sequence)
+from functools import reduce
+numbers = [10, 20, 30, 40]
+
+total = reduce(lambda a,b: a+b, numbers)
+print(f"The total using reduce: {total}")
