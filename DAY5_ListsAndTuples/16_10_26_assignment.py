@@ -139,3 +139,15 @@ for i in range(len(pdt_lst)):
         print(f"{pdt_prices[j]}", end = "")
     print()
     j += 1
+
+
+"""
+SCORE - 8/10
+
+Feedback:
+Good effort in using lists, tuples, slicing, append(), remove(), sort(), and loops.
+Stock updates and product removal are handled well.
+However, the price matching logic after removing Keyboard is incorrect, and the f-string for displaying Mouse stock has a quotation issue.
+Ensure product names, stock quantities, and prices remain correctly matched throughout the program.
+Good attempt!
+"""
