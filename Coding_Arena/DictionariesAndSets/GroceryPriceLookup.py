@@ -33,3 +33,27 @@
     Use a dictionary. Do not use sets
 """
 
+def price_lookup(product_names, product_prices, query):
+    # Dictionary mapping each product name to its price
+    result = {}
+    for i in range(len(product_names)):
+        result[product_names[i]] = product_prices[i]
+    # Message used when the product isn't found
+    t = " is not available"
+    # Product missing: return the "not available" message
+    if query not in product_names: 
+        return (result, product_names, len(product_names), query+t)
+    # Product found: return its price from the dictionary
+    else:
+        return (result, product_names, len(product_names), result[query])
+
+
+# Test cases
+print(price_lookup(["Pen", "Book", "Bag"], [10, 50, 400], "Book"))
+# Output: ({'Pen': 10, 'Book': 50, 'Bag': 400}, ['Pen', 'Book', 'Bag'], 3, 50)
+print(price_lookup(["Pen", "Book", "Bag"], [10, 50, 400], "Laptop"))
+# Output: ({'Pen': 10, 'Book': 50, 'Bag': 400}, ['Pen', 'Book', 'Bag'], 3, 'Laptop is not available')
+print(price_lookup(["Pen"], [10], "pen"))
+# Output: ({'Pen': 10}, ['Pen'], 1, 'pen is not available')   (lookup is case-sensitive)
+print(price_lookup([], [], "Pen"))
+# Output: ({}, [], 0, 'Pen is not available')
